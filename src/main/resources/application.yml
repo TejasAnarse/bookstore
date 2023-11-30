@@ -5,8 +5,8 @@ db:
   host: localhost
   name: bookstore
   user.service:
-    name: accountservice
-    password: UPf4YaRrvG
+    name: bookservice
+    password: xxx
 
 spring:
   datasource:
