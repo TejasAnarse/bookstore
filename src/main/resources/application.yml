@@ -1,0 +1,22 @@
+server:
+  port: 9000
+
+db:
+  host: localhost
+  name: bookstore
+  user.service:
+    name: accountservice
+    password: UPf4YaRrvG
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${db.host}/${db.name}?stringtype=unspecified
+    username: ${db.user.service.name}
+    password: ${db.user.service.password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate.ddl-auto: update
