@@ -34,16 +34,13 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book updateBook(Long id, Book book) {
-        Optional<Book> bookData = bookRepository.findById(id);
-        if(bookData.isPresent()) {
-            Book bookInfo = bookData.get();
-            bookInfo.setGenre(book.getGenre());
-            bookInfo.setAuthor(book.getAuthor());
-            bookInfo.setIsbn(book.getIsbn());
-            bookInfo.setPublishedDate(book.getPublishedDate());
-            bookRepository.save(bookInfo);
-        }
-        return book;
+        Book bookData = bookRepository.findById(id).get();
+        bookData.setTitle(book.getTitle());
+        bookData.setGenre(book.getGenre());
+        bookData.setAuthor(book.getAuthor());
+        bookData.setIsbn(book.getIsbn());
+        bookData.setPublishedDate(book.getPublishedDate());
+        return bookRepository.save(bookData);
     }
 
     @Override

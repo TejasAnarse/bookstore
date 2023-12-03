@@ -6,7 +6,7 @@ db:
   name: bookstore
   user.service:
     name: bookservice
-    password: xxx
+    password: xxxxx
 
 spring:
   datasource:

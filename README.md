@@ -2,13 +2,13 @@
 
 CRUD Operations
 1) Retrieving a list of all books.
--> GET : localhost:9000/books
+-> GET : localhost:9000/book-service/books
 
 2)  Retrieving a single book by ID.
--> GET : localhost:9000/book/1
+-> GET : localhost:9000/book-service/book/1
 
 3) Adding a new book
--> POST : localhost:9000/book
+-> POST : localhost:9000/book-service/book
     Request body: {
     "title": "C++",
     "author": "Alex",
@@ -18,7 +18,7 @@ CRUD Operations
 }
 
 4) Updating an existing book.
--> PUT : localhost:9000/book/3
+-> PUT : localhost:9000/book-service/book/3
    Request body: {
     "title": "Java",
     "author": "Alex",
@@ -28,6 +28,6 @@ CRUD Operations
 }
 
 5) Deleting a book by ID.
-->  DELETE: localhost:9000/book/3
+->  DELETE: localhost:9000/book-service/book/3
 
 
